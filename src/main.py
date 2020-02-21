@@ -11,8 +11,8 @@ class Pipeline:
             get_hottest_post,
             tts,
             generate_video,
-            generate_thumbnail,
-            upload_video,
+            # generate_thumbnail,
+            # upload_video,
             cleanup
         ]
         self.context = dict()
@@ -20,9 +20,9 @@ class Pipeline:
     def execute(self, **kwargs):
         self.context = kwargs
         for task in self.tasks:
-            print(f"Current Task: {task.__name__}")
+            # print(f"Current Task: {task.__name__}")
             task(self.context)
 
 if __name__ == "__main__":
     pipeline = Pipeline()
-    pipeline.execute(subreddit='askreddit', nsfw=False, comment_limit=20)
+    pipeline.execute(subreddit='askreddit', nsfw=False, comment_limit=5) # comment_limit represents how many comments are being converted into mp3

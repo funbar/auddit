@@ -3,10 +3,10 @@ import os
 from praw.models import MoreComments
 from .post import Post, Comment
 
-client_id = os.environ["REDDIT_CLIENT_ID"]
-client_secret = os.environ["REDDIT_CLIENT_SECRET"]
+# client_id = os.environ["REDDIT_CLIENT_ID"]
+# client_secret = os.environ["REDDIT_CLIENT_SECRET"]
 
-reddit = praw.Reddit(client_id=client_id, client_secret=client_secret, user_agent='auddit-dev v1.0.0 by /u/adamj0')
+reddit = praw.Reddit(client_id='Kat8NqilBdGYVA', client_secret='_7F_jA1Hs68FgLFpp71fCznFmLM', user_agent='auddit-dev v1.0.0 by /u/adamj0')
 
 
 def get_hottest_post(context):

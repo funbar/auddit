@@ -9,7 +9,7 @@ BGM_PATH = 'assets/bgm.mp3'
 STATIC_PATH = 'assets/static.mp4'
 SIZE = (1280, 720)
 BG_COLOR = (16,16,16)
-VIDEO_PATH = "data/video/"
+VIDEO_PATH = ""
 FONT = 'Amiri-regular'
 
 def generate_title(text, audio_path):

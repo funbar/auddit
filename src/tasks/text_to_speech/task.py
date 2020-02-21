@@ -5,7 +5,7 @@ import random
 from gtts import gTTS
 
 VOICES = ["Matthew", "Joey", "Kendra"]
-AUDIO_PATH = "data/audio/"
+AUDIO_PATH = "/mnt/c/Users/richa/Projects/auddit/ttsmp3recordings/"
 TTSMP3_URL = "https://ttsmp3.com/makemp3_new.php"
 
 
@@ -21,11 +21,12 @@ def save_tts(text):
       filename = json["MP3"]
       mp3_file = requests.get(url)
       path = f"{AUDIO_PATH}{filename}"
+      print(mp3_file)
       with open(path, "wb") as out_file:
          out_file.write(mp3_file.content)
       return path
    except:
-      print("TTS Rate limit reached - Fallback on Google text-to-speech")
+      print("TTS Rate limit reached - Fallback on Google text-to-speech") # If a comment is too long, throw this error
       return save_gtts(text)
 
 def save_gtts(text):
